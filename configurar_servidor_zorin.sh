@@ -79,7 +79,7 @@ EOF
   echo -e "con el usuario '${AMARILLO}$USUARIO_REAL${RESET}' ya autenticado."
   echo -e "Todos tus servidores web y servicios seguirán funcionando."
   echo -e "====================================================="
-  read -p "¿Deseas reiniciar el sistema ahora? (s/n): " opcion_reiniciar
+  read -p "¿Deseas reiniciar el sistema ahora? (s/n): " opcion_reiniciar < /dev/tty
   if [[ "$opcion_reiniciar" =~ ^[Ss]$ ]]; then
     echo -e "${AZUL}[*] Reiniciando el equipo...${RESET}"
     reboot
@@ -118,7 +118,7 @@ revertir_optimizacion() {
   echo -e "${VERDE}¡Restauración completada con éxito!${RESET}"
   echo -e "Al reiniciar, tu miniPC volverá a cargar el escritorio de Zorin OS."
   echo -e "====================================================="
-  read -p "¿Deseas reiniciar el sistema ahora? (s/n): " opcion_reiniciar
+  read -p "¿Deseas reiniciar el sistema ahora? (s/n): " opcion_reiniciar < /dev/tty
   if [[ "$opcion_reiniciar" =~ ^[Ss]$ ]]; then
     echo -e "${AZUL}[*] Reiniciando el equipo...${RESET}"
     reboot
@@ -127,7 +127,7 @@ revertir_optimizacion() {
 
 # Flujo principal
 mostrar_menu
-read -p "Elige una opción [1-3]: " opcion
+read -p "Elige una opción [1-3]: " opcion < /dev/tty
 
 case $opcion in
   1)
