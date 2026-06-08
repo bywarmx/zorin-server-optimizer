@@ -48,12 +48,12 @@ Puedes utilizar el script directamente clonando este repositorio en tu máquina:
    sudo ./configurar_servidor_zorin.sh
    ```
 
-### Opción 2: Ejecución ultra rápida en un solo comando (Directo desde internet)
+### Opción 2: Ejecución rápida en una sola línea (Sin clonar repositorio)
 
-Si no deseas clonar el repositorio y quieres ejecutar el script de forma directa, puedes hacerlo con el siguiente comando:
+Si prefieres ejecutar el script directamente sin clonar el repositorio, la forma más segura y estable para scripts interactivos con `sudo` es descargarlo temporalmente en `/tmp` y ejecutarlo:
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/bywarmx/zorin-server-optimizer/main/configurar_servidor_zorin.sh | sudo bash
+curl -sSL https://raw.githubusercontent.com/bywarmx/zorin-server-optimizer/main/configurar_servidor_zorin.sh -o /tmp/opt.sh && chmod +x /tmp/opt.sh && sudo /tmp/opt.sh && rm /tmp/opt.sh
 ```
 
 ---
