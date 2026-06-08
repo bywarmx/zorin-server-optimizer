@@ -73,6 +73,24 @@ Al ejecutar el script verás una interfaz interactiva en la terminal con las sig
 
 ---
 
+## ↩️ ¿Cómo revertir los cambios y volver al modo Escritorio?
+
+Si en algún momento necesitas volver a usar el entorno visual (escritorio) de tu Zorin OS 18, el proceso es sumamente sencillo:
+
+1. Ejecuta el script nuevamente desde tu terminal:
+   ```bash
+   sudo ./configurar_servidor_zorin.sh
+   ```
+2. Selecciona la opción **`2`** (`Revertir optimización (Modo Escritorio / Con entorno gráfico)`).
+3. El script se encargará automáticamente de:
+   * Eliminar la regla de autologin de consola.
+   * Restaurar la configuración de arranque de la interfaz gráfica (`graphical.target`).
+4. Presiona `s` para reiniciar tu equipo cuando el script lo solicite.
+
+Tras el reinicio, tu Zorin OS 18 cargará su escritorio visual de siempre con total normalidad.
+
+---
+
 ## 🔒 Consideraciones de Seguridad
 
 * **Acceso Físico:** Al activar el inicio de sesión automático (autologin) en consola, cualquier persona que conecte un teclado y un monitor físico a tu miniPC tendrá acceso directo a tu usuario sin pedirle contraseña. Utilízalo en entornos domésticos o de desarrollo controlado.
